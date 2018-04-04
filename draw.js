@@ -46,8 +46,8 @@
                 context.beginPath();
                 context.rect(0, 0, canvas.width, canvas.height);
                 var grd = context.createLinearGradient(0, 0, canvas.width, canvas.height);
-                grd.addColorStop(0, "blue"); // light green
-                grd.addColorStop(1, "red"); // dark green
+                grd.addColorStop(0, "blue"); // синий цвет
+                grd.addColorStop(1, "red"); // красный цвет
                 context.fillStyle = grd;
                 context.fill();
                 
@@ -57,8 +57,9 @@
                 colorArray.push("orange"); // 1
                 colorArray.push("blue"); // 2
                 colorArray.push("purple"); // 3
+                
                 // определяем количество цветов
-                var numFlowers = 100;
+                var numFlowers = 80;
                 
                 // рисование случано расположенных цветков
                 for (var n = 0; n < numFlowers; n++) {
@@ -79,6 +80,15 @@
                     context.lineWidth = 5;
                     context.strokeStyle = "black";
                     context.stroke();
+                    
+                    // рисуем освещение от солнце
+                    
+                    context.beginPath();
+                    context.arc(canvas.width /2 , canvas.height /2 , 80,0,2 * Math.PI , false);
+                    context.lineWidth = 3;
+                    context.strokeStyle = "yellow";
+                    context.stroke();
+                    
                     
                     
                 }
