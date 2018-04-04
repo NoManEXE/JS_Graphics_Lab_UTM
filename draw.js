@@ -8,7 +8,7 @@
                 this.color = color;
             }
             
-            // Опредеяем метод draw для рисования обьекта Flower
+            // Определяем метод draw для рисования обьекта Flower
             Flower.prototype.draw = function(){
                 var context = this.context;
                 context.beginPath();
@@ -80,17 +80,23 @@
                     context.lineWidth = 5;
                     context.strokeStyle = "black";
                     context.stroke();
+
                     
                     // рисуем освещение от солнце
                     
                     context.beginPath();
                     context.arc(canvas.width /2 , canvas.height /2 , 80,0,2 * Math.PI , false);
-                    context.lineWidth = 3;
+                    context.lineWidth = 4;
                     context.strokeStyle = "yellow";
                     context.stroke();
                     
                     
                     
+                    
                 }
             };
+
+
+             
+
         
